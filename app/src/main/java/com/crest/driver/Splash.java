@@ -47,7 +47,6 @@ public class Splash extends AppCompatActivity {
             mBussId = getIntent().getExtras().getString("i_buzz_id","");
             mRoundId = getIntent().getExtras().getString("i_round_id","");
             mType = getIntent().getExtras().getString("type","");
-
         }
 
 

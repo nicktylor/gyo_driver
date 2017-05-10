@@ -1,6 +1,7 @@
 package com.crest.driver;
 
 import android.app.Dialog;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -351,7 +352,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    ///////////////////////////////////Ride Detalil////////////////////////////////////////
+    ///////////////////////////////////Ride Detalil////////F////////////////////////////////
 
     private void getRideAPI(final String mRideId) {
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constant.URL_GET_RIDE).newBuilder();
@@ -937,8 +938,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else if (intent.getAction().equals(MyFirebaseMessagingService.MESSAGE_NOTIFICATION)){
                     Log.e("TAG","MESSAGE_NOTIFICATION Buss time = "+intent.getStringExtra("buzz_time"));
                     if(intent.getExtras() != null){
-                        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                        notificationManager.cancel(05);
+                        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+                        notificationManager.cancel(5);
+
                         mAddType = intent.getStringExtra("pickup_address");
                         mBuzzTime = intent.getStringExtra("buzz_time");
                         mRideId = intent.getStringExtra("i_ride_id");

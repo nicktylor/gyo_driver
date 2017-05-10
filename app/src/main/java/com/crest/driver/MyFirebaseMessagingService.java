@@ -1,5 +1,6 @@
 package com.crest.driver;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -44,6 +45,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         i_round_id = remoteMessage.getData().get("i_round_id");
         mType = remoteMessage.getData().get("type");
 
+        Log.e("TAG",remoteMessage.getData().toString());
+
         Log.e("TAG","buzz_time"+buzz_time);
         Log.e("TAG","i_round_id"+i_round_id);
         Log.e("TAG","mType = "+mType);
@@ -54,15 +57,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 return;
             }else if(mType.equalsIgnoreCase("driver_ride_cancel")){
                 rideCancleRequest();
+                sendNotification("");
             }else if(mType.equalsIgnoreCase("driver_ride_buzz")){
                 SendMessageNotification();
+                sendNotification("");
             }
         }
 
 
 //      Preferences.setValue(getApplicationContext(),Preferences.DRIVER_COME_FROM,"NOTIF");
-
-        sendNotification("");
 
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
@@ -115,22 +118,33 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         intent.putExtra("type",mType);
 
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-                PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0/* Request code */, intent,
+                0);
 
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        NotificationCompat.Builder notificationBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
+        Notification noti = new Notification.Builder(this)
+                .setContentTitle("Ride request")
+                .setContentText(buzz_time + "sec")
+                .setSmallIcon(R.drawable.ic_taxi)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent)
+                //.setLargeIcon(aBitmap)
+                .build();
+
+        noti.flags |= Notification.FLAG_ONLY_ALERT_ONCE | Notification.FLAG_AUTO_CANCEL;
+
+        /*NotificationCompat.Builder notificationBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_taxi)
                 .setContentTitle("Ride request")
                 .setContentText(buzz_time + "sec")
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
-                .setContentIntent(pendingIntent);
+                .setContentIntent(pendingIntent);*/
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        notificationManager.notify(05 /* ID of notification */, notificationBuilder.build());
+        notificationManager.notify(5, noti);
     }
 
     private void SendMessageToDeitician(String Message) {
