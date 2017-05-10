@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/activity_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="3dp"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/colorGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_tab_layout"
+        android:layout_above="@+id/lay_status"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <android.support.v4.view.ViewPager
+            android:layout_weight="1"
+            android:id="@+id/activity_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map_deshbord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_status"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="AVAILABLE"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:id="@+id/tv_status" />
+
+    </RelativeLayout>
+</RelativeLayout>

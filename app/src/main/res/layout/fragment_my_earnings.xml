@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_from_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FROM DATE"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/answer" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/txt_from_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/heading" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/ic_from_calender"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_calander"
+                            android:tint="@color/colorButton" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginTop="4dp"
+
+                    android:background="@color/colorGrey"></View>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_to_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TO DATE"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/answer" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/txt_to_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/heading" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/ic_to_calander"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_calander"
+                            android:tint="@color/colorButton" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorGrey"></View>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="@dimen/margin_button"
+            android:background="@drawable/black_button"
+            android:text="@string/button_earnings_get"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_my_earnings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_top"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Records Found"
+        android:layout_centerInParent="true"
+        android:textSize="18dp"
+        android:visibility="gone"/>
+</RelativeLayout>

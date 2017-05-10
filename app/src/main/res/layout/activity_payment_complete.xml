@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/action_bar_home"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENT RECEIVED"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="26dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="top"
+
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Add Cash amount"
+                            android:layout_margin="5dp"
+                            android:layout_toLeftOf="@+id/txt_add_amount"
+                            android:inputType="number"/>
+
+                        <TextView
+                            android:id="@+id/txt_add_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add"
+                            android:background="@drawable/black_button"
+                            android:textSize="16dp"
+                            android:padding="8dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorButton">
+
+                        <Button
+                            android:id="@+id/bt_rate_ride"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:background="@drawable/black_button"
+                            android:text="Rate this ride"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

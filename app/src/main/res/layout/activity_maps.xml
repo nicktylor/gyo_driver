@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_home"></include>
+
+    <FrameLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.crest.driver.MapsActivity" />
+
+        <include
+            layout="@layout/map_select_location"
+            android:visibility="gone"></include>
+
+        <include layout="@layout/map_select_location_simple"></include>
+
+        <include layout="@layout/map_bottom_dr_start_ride"
+            android:visibility="visible"></include>
+        <include layout="@layout/map_bottom_dr_complete_ride"
+            android:visibility="gone"></include>
+    </FrameLayout>
+</LinearLayout>

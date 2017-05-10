@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/layout_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/select_loaction"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_my_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="My Earning"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/select_loaction"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_comp_trip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Completed Trip"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

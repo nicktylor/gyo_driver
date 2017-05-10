@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_dashboard" />
+        <item
+            android:id="@+id/nav_my_rides"
+            android:icon="@drawable/ic_my_ride"
+            android:title="@string/nav_my_rides" />
+        <item
+            android:id="@+id/nav_my_wallet"
+            android:icon="@drawable/ic_my_wallet"
+            android:title="@string/nav_my_wallet" />
+        <item
+            android:id="@+id/nav_my_earnings"
+            android:icon="@drawable/ic_money"
+            android:title="@string/nav_my_earnings" />
+
+        <item
+            android:id="@+id/nav_my_terms_conditions"
+            android:icon="@drawable/car"
+            android:title="@string/terms_conditions" />
+
+
+    </group>
+
+
+</menu>

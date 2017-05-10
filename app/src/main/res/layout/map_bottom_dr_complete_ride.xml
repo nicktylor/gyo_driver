@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_dr_complete_ride"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="3dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="start"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Pay any extra amount?"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/tv_add_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Add Amount" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorButton"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <LinearLayout
+                android:id="@+id/lay_complete_ride"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_start_ride"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete ride"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/bt_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

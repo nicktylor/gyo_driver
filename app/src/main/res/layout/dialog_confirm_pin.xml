@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_loaction"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmation PIN "
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Enter Confirmation PIN "
+            android:textSize="12dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorGrey"></View>
+
+        <EditText
+            android:id="@+id/edttxt_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter PIN"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorBlack"
+            android:inputType="number"
+            android:textSize="16dp" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/colorGrey"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="cancel"
+                android:textColor="@color/colorGrey" />
+
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Apply pin" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

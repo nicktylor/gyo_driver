@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.crest.driver.fragment.TermsandConditionsFragment">
+
+    <!--<WebView
+        android:id="@+id/web_terms_condition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginLeft="14dp"
+            android:textColor="@android:color/black"/>
+
+    </ScrollView>
+
+
+</FrameLayout>
