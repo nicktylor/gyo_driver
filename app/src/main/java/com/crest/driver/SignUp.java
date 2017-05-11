@@ -478,6 +478,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                         Intent intent = new Intent(getApplicationContext(), VeryfyActivity.class);
                         intent.putExtra("et_mobile_number",et_mobile_number.getText().toString());
                         startActivity(intent);
+                        finish();
 
                     } else {
 

@@ -66,6 +66,12 @@ public class VeryfyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_veryfy);
 
+        mBack = (ImageView)findViewById(R.id.img_back);
+        mMobileNo = (TextView)findViewById(R.id.txt_mobile);
+        mVarifyCode = (TextView)findViewById(R.id.txt_varify_code);
+        mVeryfy = (Button)findViewById(R.id.btn_veryfy);
+        mProgressBar = (ProgressBar)findViewById(R.id.progress_bar);
+
         if(getIntent().getExtras() != null){
             et_user_name = getIntent().getExtras().getString("et_user_name","");
             et_vehicle_number = getIntent().getExtras().getString("et_vehicle_number","");
@@ -83,12 +89,6 @@ public class VeryfyActivity extends AppCompatActivity {
 
             mMobileNo.setText(et_mobile_number);
         }
-
-        mBack = (ImageView)findViewById(R.id.img_back);
-        mMobileNo = (TextView)findViewById(R.id.txt_mobile);
-        mVarifyCode = (TextView)findViewById(R.id.txt_varify_code);
-        mVeryfy = (Button)findViewById(R.id.btn_veryfy);
-        mProgressBar = (ProgressBar)findViewById(R.id.progress_bar);
 
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
